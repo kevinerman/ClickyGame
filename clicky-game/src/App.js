@@ -10,14 +10,23 @@ class App extends Component {
     gamecards
   };
 
+  guessCard = id => {
+    const gamecards = this.state.gamecards;
+
+    console.log(gamecards[id-1]);
+  }
+
   render() {
     return (
       <Wrapper>
         {this.state.gamecards.map(gamecard => (
         <GameCard
+          guessCard={this.guessCard}
+          id={gamecard.id}
+          key={gamecard.id}
           image={gamecard.image}
         />
-    ))};
+    ))}
     </Wrapper>
     );
   }
