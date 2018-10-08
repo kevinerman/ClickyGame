@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import GameCard from "./components/GameCard/"
-import gamecards from "./gamecard.json"
+import GameCard from "./components/GameCard"
+import gamecards from "./gamecards.json"
+import Wrapper from "./components/Wrapper"
 
 class App extends Component {
 
@@ -12,9 +12,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <GameCard></GameCard>
-      </div>
+      <Wrapper>
+        {this.state.gamecards.map(gamecard => (
+        <GameCard
+          image={gamecard.image}
+        />
+    ))};
+    </Wrapper>
     );
   }
 }
