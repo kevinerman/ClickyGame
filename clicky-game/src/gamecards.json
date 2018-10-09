@@ -2,21 +2,25 @@
     {
       "id": 1,
       "beenClicked": false,
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/666px-Spongebob-squarepants.svg.png"
+      "image": "https://vignette.wikia.nocookie.net/swfanon/images/e/e0/Ki_adi_mundi.jpg",
+      "position": 1
     },
     {
       "id": 2,
       "beenClicked": false,
-      "image": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131"
+      "image": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
+      "position": 2
     },
     {
       "id": 3,
       "beenClicked": false,
-      "image": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626"
+      "image": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
+      "position": 3
     },
     {
       "id": 4,
       "beenClicked": false,
-      "image": "https://s-media-cache-ak0.pinimg.com/originals/fe/32/49/fe32495d45283cd6860ae122f0aeaad9.png"
+      "image": "https://s-media-cache-ak0.pinimg.com/originals/fe/32/49/fe32495d45283cd6860ae122f0aeaad9.png",
+      "position": 4
     }
   ]

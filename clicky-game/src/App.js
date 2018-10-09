@@ -5,7 +5,27 @@ import gamecards from "./gamecards.json"
 import Wrapper from "./components/Wrapper"
 
 let guessedArray = [];
-let gameOn = false;
+// let gameOn = false;
+let randomArray = [];
+
+const randomizeNumber = () => {
+  let randomNumber = Math.floor((Math.random() * 12) + 1)
+  return(randomNumber)
+}
+
+const randomizePosition = () => {
+  let randomNumber = randomizeNumber();
+
+  if (randomArray.length < 12) {
+    if (randomArray.includes(randomNumber)) {
+      randomizePosition()
+    } else {
+      randomArray.push(randomNumber);
+      randomizePosition();
+    }
+  }
+
+}
 
 class App extends Component {
 
@@ -14,7 +34,9 @@ class App extends Component {
       this.setState({ score: this.score.currentScore = 0 });
       alert("you lose");
       guessedArray = [];
-      return
+      return true
+    } else {
+      return false
     }
   }
 
@@ -28,10 +50,11 @@ class App extends Component {
   };
 
   updateScore = () => {
-    gameOn = true;
+    randomArray = [];
+    randomizePosition();
     this.setState({ score: this.score.currentScore = guessedArray.length });
     if (this.score.highScore < guessedArray.length) {
-    this.setState({ score: this.score.highScore = guessedArray.length })
+      this.setState({ score: this.score.highScore = guessedArray.length })
     };
   }
 
@@ -39,13 +62,10 @@ class App extends Component {
 
     let guessID = this.state.gamecards[id - 1].id;
     // console.log(clickCheck);
-    
-    if (gameOn === true) {
-    (this.arrayCheck(guessID));
-    gameOn = false;
-    } else if (gameOn === false) {
-    guessedArray.push(guessID);
-    this.updateScore();
+
+    if (!this.arrayCheck(guessID)) {
+      guessedArray.push(guessID);
+      this.updateScore();
     }
 
     console.log(guessedArray);
@@ -59,7 +79,7 @@ class App extends Component {
         <Wrapper>
           {this.state.gamecards.map(gamecard => (
             <GameCard
-              state={this.beenClicked}
+              position={randomArray[gamecard.id]}
               guessCard={this.guessCard}
               id={gamecard.id}
               key={gamecard.id}
