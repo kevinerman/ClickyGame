@@ -79,7 +79,7 @@ class App extends Component {
         <Wrapper>
           {this.state.gamecards.map(gamecard => (
             <GameCard
-              position={randomArray[gamecard.id]}
+              position={"position" + randomArray[gamecard.id - 1]}
               guessCard={this.guessCard}
               id={gamecard.id}
               key={gamecard.id}
