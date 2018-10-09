@@ -9,15 +9,10 @@
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   }
   
-  /* .card > .img-container {
-    height: 60%;
+  .card {
     overflow: hidden;
     background:#6CADDC;
   }
-  .card > .img-container > img {
-    width: 60%;
-    height: auto;
-  } */
 
   img {
       position: relative;
@@ -27,70 +22,70 @@
 
 #position1 {
  position:absolute;
- left:0px;
+ left:1.25%;
   }
 
 #position2 {
   position: absolute;
-  left:25%;
+  left:24.75%;
 }
 
 #position3 {
   position:absolute;
-  left:50%;
+  left:48.25%;
    }
  
  #position4 {
    position: absolute;
-   left:75%;
+   left:71.75%;
  }
 
  #position5 {
   position:absolute;
-  left:0%;
-  top:52.5%;
+  left:1.25%;
+  top:55.25%;
    }
  
  #position6 {
    position: absolute;
-   left:25%;
-   top:52.5%;
+   left:24.75%;
+   top:55.25%;
  }
 
  #position7 {
   position:absolute;
-  left:50%;
-  top:52.5%;
+  left:48.25%;
+  top:55.25%;
    }
  
  #position8 {
    position: absolute;
-   left:75%;
-   top:52.5%;
+   left:71.75%;
+   top:55.25%;
  }
 
  #position9 {
   position:absolute;
-  left:0px;
-  top:85%;
+  left:1.25%;
+  top:90.75%;
    }
  
  #position10 {
    position: absolute;
-   left:25%;
-   top:85%;
+   left:24.75%;
+   top:90.75%;
  }
 
  #position11 {
   position:absolute;
-  left:50%;
-  top:85%;
+  left:48.25%;
+  top:90.75%;
    }
  
  #position12 {
    position: absolute;
-   left:75%;
-   top:85%;
+   left:71.75%;
+   top:90.75%;
  }
   
   
